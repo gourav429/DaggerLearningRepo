@@ -1,9 +1,11 @@
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 interface UserRepository {
     void saveUser(String email, String password);
 }
 
+@Singleton
 class SQLRepository implements UserRepository {
 
     @Inject
