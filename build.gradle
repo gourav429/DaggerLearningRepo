@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+
+    test {
+        java {
+            srcDir 'test'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.dagger:dagger:2.13'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
+}
+
+mainClassName = 'Main'
+
+run {
+    standardInput = System.in
+}
